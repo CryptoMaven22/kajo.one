@@ -1,11 +1,114 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Kajo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kajo — People. Processes. Possibilities.</title>
+  <meta name="description" content="Kajo is a design and intelligent systems studio focused on people, processes, and possibilities.">
+  <style>
+    :root{
+      --ink:#202338;
+      --ivory:#f5f1e8;
+      --muted:#6f7180;
+      --line:rgba(32,35,56,.16);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--ivory);
+      color:var(--ink);
+      font-family:Georgia,"Times New Roman",serif;
+    }
+    .shell{min-height:100vh;display:flex;flex-direction:column}
+    header{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:28px 6vw;border-bottom:1px solid var(--line);
+    }
+    .brand{font:700 1rem/1 Arial,sans-serif;letter-spacing:.22em}
+    .mark{width:28px;height:10px;border-top:2px solid var(--ink);border-radius:50%}
+    main{flex:1}
+    .hero{
+      min-height:68vh;display:grid;align-content:center;
+      padding:9vw 6vw 7vw;max-width:1280px;margin:0 auto;
+    }
+    .eyebrow{
+      font:600 .76rem/1.2 Arial,sans-serif;letter-spacing:.2em;
+      text-transform:uppercase;color:var(--muted);margin-bottom:24px;
+    }
+    h1{
+      margin:0;max-width:950px;
+      font-size:clamp(3.4rem,9vw,8rem);
+      line-height:.9;font-weight:500;letter-spacing:-.045em;
+    }
+    .sub{
+      margin:34px 0 0;max-width:700px;
+      font:400 clamp(1.05rem,1.7vw,1.4rem)/1.55 Arial,sans-serif;
+      color:var(--muted);
+    }
+    .work{
+      border-top:1px solid var(--line);
+      display:grid;grid-template-columns:repeat(3,1fr);
+      max-width:1280px;margin:0 auto;
+    }
+    .card{padding:38px 6vw 46px;border-right:1px solid var(--line)}
+    .card:last-child{border-right:0}
+    .num{font:600 .7rem/1 Arial,sans-serif;letter-spacing:.14em;color:var(--muted)}
+    h2{font-size:clamp(1.7rem,3vw,2.8rem);font-weight:500;margin:26px 0 12px}
+    .card p{font:400 .98rem/1.55 Arial,sans-serif;color:var(--muted);margin:0}
+    footer{
+      display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
+      padding:28px 6vw;border-top:1px solid var(--line);
+      font:500 .75rem/1.4 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;
+      color:var(--muted);
+    }
+    @media (max-width:800px){
+      header{padding:22px 24px}
+      .hero{padding:18vh 24px 12vh}
+      .work{grid-template-columns:1fr}
+      .card{padding:30px 24px;border-right:0;border-bottom:1px solid var(--line)}
+      .card:last-child{border-bottom:0}
+      footer{padding:22px 24px}
+    }
+  </style>
 </head>
 <body>
-  <h1>Kajo</h1>
-  <p>kajo.one is live.</p>
+  <div class="shell">
+    <header>
+      <div class="brand">KAJO</div>
+      <div class="mark" aria-hidden="true"></div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow">People · Processes · Possibilities</div>
+        <h1>Clarity for work that doesn’t fit neatly in a box.</h1>
+        <p class="sub">Kajo is a design and intelligent systems studio. We help people make sense of messy work, shape better processes, and build practical systems that make the next move clearer.</p>
+      </section>
+
+      <section class="work" aria-label="What Kajo does">
+        <article class="card">
+          <div class="num">01</div>
+          <h2>Discovery</h2>
+          <p>Find the real problem, the real constraints, and the decisions that matter before building anything.</p>
+        </article>
+        <article class="card">
+          <div class="num">02</div>
+          <h2>Design</h2>
+          <p>Turn complexity into clear workflows, useful interfaces, and operating models people can actually use.</p>
+        </article>
+        <article class="card">
+          <div class="num">03</div>
+          <h2>Intelligent Systems</h2>
+          <p>Use automation and AI where they improve judgment, reduce friction, and make important work easier to see.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <span>Kajo</span>
+      <span>Discovery · Design · Intelligent Systems</span>
+    </footer>
+  </div>
 </body>
 </html>
